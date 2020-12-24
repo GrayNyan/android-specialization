@@ -47,14 +47,14 @@ public class HerdManager {
     public static final int HERD = 24;
 
     public void simulateHerd(Random rand)
-    {
+    {  //initial value in the pen
         int count = HERD;
         mOut.println("There are currently " + count + " snails in the pen and "
                 + (HERD - count) + " snails in the pasture");
         for (int i = 0; i < 10; i++)
         {
             switch (count)
-            {
+            {  //if the number of snails match any of the cases or none, it will add or subtract a random amount
                 case HERD:
                     count -= (rand.nextInt(count) + 1);
                     break;
@@ -70,6 +70,4 @@ public class HerdManager {
                     + (HERD - count) + " snails in the pasture");
         }
     }
-
-    
 }
